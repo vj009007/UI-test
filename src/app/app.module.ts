@@ -16,6 +16,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatDialogModule} from '@angular/material/dialog';
 import { FormPopupComponent } from './form-popup/form-popup.component';
 import { FormsModule } from '@angular/forms';
+import {MatRadioModule} from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -37,14 +38,16 @@ import { FormsModule } from '@angular/forms';
     MatButtonModule,
     MatCardModule,
     MatDialogModule,
-    FormsModule
+    FormsModule,
+    MatRadioModule
   ],
   exports :[
     MatIconModule,
     MatButtonModule,
     MatCardModule,
     MatDialogModule,
-    FormsModule
+    FormsModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]

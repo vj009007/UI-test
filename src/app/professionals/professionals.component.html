@@ -37,27 +37,43 @@
                             <div class="form-wrapper">
                                 <div class="form-flex">
                                     <div class="f-name">Name:</div>
-                                    <div class="f-value">Marry, Jason</div>
+                                    <div class="f-value">{{datas.name}}<input type="hidden" 
+                                        [(ngModel)]="datas.name" name="name" /></div>
                                 </div>
                                 <div class="form-flex">
                                     <div class="f-name">Doamin:</div>
-                                    <div class="f-value">www.xyz.com</div>
+                                    <div class="f-value">{{datas.domain}}
+                                       <input type="hidden" 
+                                        [(ngModel)]="datas.domain"/>
+                                    </div>
                                 </div>
                                 <div class="form-flex">
                                     <div class="f-name">Gender:</div>
-                                    <div class="f-value">Male</div>
+                                    <div class="f-value">{{datas.gender}}
+                                         <input type="hidden" 
+                                        [(ngModel)]="datas.gender" />
+                                    </div>
                                 </div>
                                 <div class="form-flex">
                                     <div class="f-name">Date of Birth:</div>
-                                    <div class="f-value">8th June 1979</div>
+                                    <div class="f-value">{{datas.dob}}
+                                         <input type="hidden" 
+                                        [(ngModel)]="datas.dob" />
+                                    </div>
                                 </div>
                                 <div class="form-flex">
                                     <div class="f-name">Phone Number:</div>
-                                    <div class="f-value">+919876543210</div>
+                                    <div class="f-value">{{datas.phone}}
+                                        <input type="hidden" 
+                                        [(ngModel)]="datas.phone" />
+                                    </div>
                                 </div>
                                 <div class="form-flex">
                                     <div class="f-name">Location:</div>
-                                    <div class="f-value">Dehli 110017</div>
+                                    <div class="f-value">{{datas.location}}
+                                        <input type="hidden" 
+                                        [(ngModel)]="datas.location" />
+                                    </div>
                                 </div>
                             </div>
                         </div>
