@@ -1,0 +1,43 @@
+<header class="headinglayout" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center"
+  [class.mobile-menu]="classApplied">
+  <div class="container">
+    <div fxFlex="100%" class="navbar">
+      <div class="logo">
+        <img src="../../assets/images/logo.png" alt="logo">
+      </div>
+      <div class="toggle-menu" (click)="toggleClass()">
+        <i></i>
+        <i></i>
+        <i></i>
+      </div>
+      <mat-nav-list class="menubar">
+        <div class="first-nav">
+          <a [routerLink]="'/home'" routerLinkActive="active-link"><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+            Home </a>
+          <a [routerLink]="'/trustees'" routerLinkActive="active-link"><mat-icon>supervisor_account</mat-icon> Trustees </a>
+          <a [routerLink]="'/professionals'" routerLinkActive="active-link"><mat-icon>person</mat-icon> Professionals</a>
+          <a [matMenuTriggerFor]="aboveMenu" routerLinkActive="active-link"><mat-icon>more_horiz</mat-icon> Menu</a>
+          <mat-menu #aboveMenu="matMenu" yPosition="above">
+            <button mat-menu-item>Item 1</button>
+            <button mat-menu-item>Item 2</button>
+          </mat-menu>
+        </div>
+        <div class="second-nav">
+          <mat-icon>search</mat-icon>
+          <button mat-fab extended color="primary">
+            <mat-icon>email</mat-icon>
+            Invite
+          </button>
+          <div>
+            <a [matMenuTriggerFor]="profile" class="p-0 m-0"><img src="../../assets/images/profile.jpg.png" alt="Profile"
+                class="profile-icon"></a>
+            <mat-menu #profile="matMenu">
+              <button mat-menu-item>Item 1</button>
+              <button mat-menu-item>Item 2</button>
+            </mat-menu>
+          </div>
+        </div>
+      </mat-nav-list>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,397 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  color: #000;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+.mat-mdc-button:not(:disabled) {
+  color: #000 !important;
+}
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+.p-0 {
+  padding: 0;
+}
+.m-0 {
+  margin: 0;
+}
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/****Header ******/
+header {
+  padding: 6px 0;
+  background-color: #fff;
+  box-shadow: 0 12px 1px rgb(0 0 0 / 1%), 0 10px 10px rgb(0 0 0 / 11%);
+  position: relative;
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    .toggle-menu {
+      width: 24px;
+      height: 24px;
+      display: inline-block;
+      position: relative;
+    }
+    .toggle-menu i {
+      display: block;
+      height: 2px;
+      background: #000;
+      width: 24px;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+      position: absolute;
+    }
+    .toggle-menu i:nth-child(1) {
+      top: 0px;
+    }
+    .toggle-menu i:nth-child(2) {
+      top: 8px;
+    }
+    .toggle-menu i:nth-child(3) {
+      top: 16px;
+    }
+  }
+  .menubar {
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    .first-nav {
+      display: flex;
+      align-items: center;
+      a {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      a.active-link {
+        color: #c62128;
+      }
+    }
+    .second-nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      .profile-icon {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      .mat-mdc-extended-fab {
+        background-color: #c62128;
+        height: 32px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        box-shadow: none;
+        .mat-icon {
+          font-size: 16px;
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+  }
+}
+
+.mat-mdc-fab.mat-primary,
+.mat-mdc-mini-fab.mat-primary {
+  --mdc-fab-container-color: #c62128 !important;
+  --mdc-fab-icon-color: #fff;
+  --mat-mdc-fab-color: #fff;
+}
+/****Header ******/
+
+/********Main-content*******/
+.main-content {
+  padding: 15px;
+  .wrapper {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    gap: 15px;
+    margin-top: 10px;
+    .width-25 {
+      display: flex;
+      flex-basis: 25%;
+      background-color: #fff;
+      box-shadow: 5px 5px 20px rgb(0 0 0 / 1%), 0 10px 10px rgb(0 0 0 / 11%);
+      padding: 15px 30px 30px;
+      .card-profile img {
+        height: 125px;
+        object-fit: contain;
+      }
+      .card-title {
+        font-size: 26px;
+        text-align: center;
+        padding-top: 15px;
+        font-weight: 500;
+      }
+      .card-post {
+        font-size: 18px;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 400;
+        color: #8b8c8e;
+      }
+      .card-member {
+        font-size: 16px;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 400;
+        img {
+          width: 18px;
+          display: inline-block;
+          margin-right: 10px;
+        }
+      }
+      .card-educution {
+        display: flex;
+        font-size: 16px;
+        font-weight: 400;
+        gap: 15px;
+        padding-top: 20px;
+      }
+      .divider {
+        margin: 25px 0;
+        height: 1px;
+        background-color: #e5e1e2;
+      }
+      .send-mail {
+        color: #c62128;
+        text-decoration: none;
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        font-weight: 400;
+      }
+    }
+    .width-75 {
+      display: flex;
+      flex-basis: 75%;
+      background-color: #fff;
+      box-shadow: 5px 5px 20px rgb(0 0 0 / 1%), 0 10px 10px rgb(0 0 0 / 11%);
+      .mat-mdc-card-content {
+        padding: 0;
+        border: 1px solid #e7eacd;
+        .business {
+          background-color: #e7eacd;
+          padding: 20px 25px;
+          font-size: 20px;
+          font-weight: 500;
+        }
+        .profile-wrapper {
+          padding: 20px;
+          .profile-card {
+            border: 1px solid #dcdbe0;
+            padding: 15px 20px;
+            .profile-flex {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              width: 100%;
+              padding-bottom: 8px;
+              border-bottom: 2px solid #f5f5f5;
+              div {
+                font-size: 16px;
+                font-weight: 500;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                mat-icon {
+                  color: #737a34;
+                }
+              }
+              button {
+                padding: 15px 40px;
+                border-radius: 5px;
+                box-shadow: none;
+              }
+            }
+            .form-wrapper {
+              padding-top: 15px;
+              display: flex;
+              flex-direction: column;
+              gap: 20px;
+              .form-flex {
+                display: flex;
+                align-items: center;
+                div.f-name {
+                  flex-basis: 30%;
+                  font-weight: 500;
+                }
+                .f-value {
+                  flex-basis: 70%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/********Main-content*******/
+/*******Form *****/
+.mat-mdc-dialog-container .mdc-dialog__title {
+    color: #000 !important;
+  }
+.mat-mdc-dialog-container .mdc-dialog__surface {
+  background-color: #fff !important;
+  color: #000 !important;
+  .form-group {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    color: #000 !important;
+    input {
+      padding: 10px 15px;
+      outline: none;
+      border-radius: 5px;
+      border: none;
+      width: 300px;
+      background: #dcdbe0;
+    }
+  }
+  .mdc-dialog__actions {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+  }
+  button {
+    padding: 15px 40px;
+    border-radius: 5px;
+    box-shadow: none;
+    background-color: green;
+    outline: none;
+    color: #fff;
+    border: none;
+    margin-top: 50px;
+    font-family: "Roboto";
+    letter-spacing: 0.04em;
+    font-weight: 500;
+    font-size: 14px;
+  }
+  .close-btn {
+    padding: 10px;
+    border-radius: 50px;
+    box-shadow: none;
+    background-color: #c62128;
+    outline: none;
+    color: #fff !important;
+    border: none;
+    width: 37px;
+    margin: 0;
+  }
+}
+/*******Form *****/
+/******* Responssive ***********/
+@media (min-width: 768px) {
+  .container {
+    width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 920px;
+  }
+  header {
+    .navbar {
+      justify-content: flex-start;
+      .toggle-menu {
+        display: none;
+      }
+    }
+    .menubar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      .first-nav {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+  .menubar {
+    .first-nav {
+      gap: 50px !important;
+    }
+  }
+}
+@media (min-width: 1470px) {
+  .container {
+    width: 1370px;
+  }
+}
+@media (max-width: 991px) {
+  header.mobile-menu {
+    .toggle-menu i:nth-child(1) {
+      top: 5px;
+      -webkit-transform: rotateZ(45deg);
+      transform: rotateZ(45deg);
+    }
+    .toggle-menu i:nth-child(2) {
+      background: transparent;
+    }
+    .toggle-menu i:nth-child(3) {
+      top: 5px;
+      -webkit-transform: rotateZ(-45deg);
+      transform: rotateZ(-45deg);
+    }
+    .menubar {
+      display: flex;
+      position: absolute;
+      flex-direction: column;
+      left: 0;
+      padding: 20px;
+    }
+  }
+  .menubar {
+    left: -500px;
+    position: absolute;
+    top: 68px;
+    min-height: calc(100vh - 109px);
+    z-index: 999;
+    width: 300px;
+    gap: 15px;
+    background: #ececec;
+    .first-nav {
+      display: flex;
+      align-items: flex-start !important;
+      gap: 15px;
+      flex-direction: column;
+    }
+    .second-nav {
+      display: flex;
+      align-items: flex-start !important;
+      gap: 15px;
+      flex-direction: column;
+    }
+  }
+}
